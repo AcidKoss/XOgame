@@ -8,18 +8,20 @@
 
 public class Main {
     public static void main(String[] args) {
-        CreateField field = new CreateField(3,3);
+        int a = 0;
+        CreateField field = new CreateField(9,9);
         field.creatingField();
         field.displayingField(field.creatingField());
 
         GameLogic game = new GameLogic(field.creatingField());
-        game.setGameSign();
-        System.out.println(game.checkingQueue());
 
-
-
-
-
-
+        while (a <= 100) {
+            game.setGameSign();
+            field.inputAxisX();
+            field.inputAxisY();
+            field.writingSignInField(game.getGameSign(), field.getAxisX(), field.getAxisY());
+            field.displayingField(field.getPlayingField());
+            a++;
+        }
     }
 }

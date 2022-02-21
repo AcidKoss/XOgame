@@ -12,7 +12,7 @@ public class GameLogic {
         this.playField = field;
     }
 
-    //Ввод игрового знака с консоли
+    //Ввод игрового знака с консоли и проверка на корректность
     public void setGameSign() {
         while (a) {
             Scanner console = new Scanner(System.in);
@@ -27,6 +27,9 @@ public class GameLogic {
         }
 
     }
+    public String getGameSign() {
+        return gameSign;
+    }
 
 //Проверка какой игрок сделал ход пока не придумал как ????????????????????????
     public String checkingQueue () {
@@ -35,6 +38,6 @@ public class GameLogic {
         return gameSign;
     }
 
-//Ввод координат куда записать
+
 
 }
